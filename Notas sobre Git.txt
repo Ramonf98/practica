@@ -1,0 +1,35 @@
+
+Un control de versiones nos permite controlar versiones de proyectos.
+
+Repositorio: Un Repositorio no  es mas que un proyecto donde se alojara el sitio, todo el codigo y ademas las versiones del mismo.
+
+El termino de commit significa que estamos creando una nueva version del proyecto. Se recomienda hacer commit cada vez que se haga algun cambio especifico en el proyecto.
+
+Existe un termino muy importante de entender a la hora de hacer los commit, es decir, crear una nueva version, ese termino se llama staying index.
+El staying index es basicamente la fase que tenemos que pasar antes de enviar nuestros archivos a una nueva version.
+
+
+
+Comandos Sobre Git y descripcion.
+
+git --version                                   -->  Muestra la version de git.
+
+git config --global                             --> Significa que la configuracion que se indique en este comando sera la misma para todos los proyectos.
+
+git config --global user.name "Ramon Cordova"   --> Establecemos un nombre de usuario
+
+git config --global user.email "rfc@correo.com" --> Establecemos el correo del usuario
+
+git config --global color.ui true               --> Activamos el resaltamiento de los comandos con colores
+
+git init                                        --> Te Permite crear un repositorio
+
+git status                                      --> Te Permite ver el estado de tu repositorio
+
+git add "nombre del arhcivo"                    --> Agregamos un archivo al staying index.
+git add .                                       --> Agregamos todos los archivos modificados al staying index
+
+git commit -m "descripcion"                     --> Agregams un nuevo commit
+
+
+
