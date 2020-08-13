@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework_simplejwt.views import (TokenObtainPairView,TokenRefreshView)
+from inventory.apis import UserApi
+from inventory.views import PersonView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-token/',TokenObtainPairView.as_view()),
+    path('api-token-refresh/',TokenRefreshView.as_view()),
+    path('api/1.0/person', PersonView.as_view(), name="person_view"),
+    path('api/1.0/user', UserApi.as_view(), name="user_view"),
+
+
 ]
