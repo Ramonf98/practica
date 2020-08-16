@@ -1,4 +1,3 @@
-*.txt
 /backend/.venv/
 /backend/.idea/
 /.idea/
