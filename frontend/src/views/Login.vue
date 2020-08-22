@@ -3,7 +3,6 @@
         <v-row class="justify-center">
             <v-col sm="5" >
                 <v-card>
-    
                     <v-card-title class="primary white--text">
                         <span>Login Form</span>
                         <v-spacer></v-spacer>
@@ -24,7 +23,7 @@
                     </v-form>
                     <!-- Los botones por ejemplo -->
                     <v-card-actions class="justify-end pt-0 pb-5">
-                        <v-btn color="secondary" rounded>SIGN UP</v-btn>
+                        <router-link to="/sign_up" class="mr-2"><v-btn color="secondary" rounded>SIGN UP</v-btn></router-link>
                         <v-btn color="info" rounded>LOG IN</v-btn>
                     </v-card-actions>
                 </v-card>

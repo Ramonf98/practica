@@ -22,8 +22,13 @@ Vue.use(VueRouter)
     path: '/login',
     name: 'Login',
     component: () => import(/* webpackChunkName: "Login" */'@/views/Login.vue')
+  },
+  {
+    path: '/sign_up',
+    name: 'SignUp',
+    component: () => import(/* webpackChunkName: "SignUp" */'@/views/SignUp.vue')
   }
-]
+  ]
 
 const router = new VueRouter({
   mode: 'history',
