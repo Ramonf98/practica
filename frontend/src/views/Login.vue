@@ -16,7 +16,7 @@
                                     <v-text-field prepend-icon="person" label="Username" :rules="rules" hide-details="auto"></v-text-field>
                                 </v-col>
                                 <v-col sm="12">
-                                    <v-text-field prepend-icon="lock" label="Password"></v-text-field>
+                                    <v-text-field prepend-icon="lock" label="Password" type="password"></v-text-field>
                                 </v-col>
                             </v-row>
                         </v-container>
