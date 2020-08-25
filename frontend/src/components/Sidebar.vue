@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import {mapState,mapMutations} from 'vuex';
+import {mapState} from 'vuex';
 
   export default {
     name: 'Sidebar',
@@ -26,16 +26,13 @@ import {mapState,mapMutations} from 'vuex';
         items: [
           { title: 'Home', icon: 'home' },
           { title: 'Inventory', icon: 'all_inbox' },
-        ]
+        ],
       }
     },
     computed: {
         ...mapState(['visible']),    
         
-    },
-    methods: {
-        ...mapMutations(['changeVisible'])
-    },
+    }
 
   }
 </script>
