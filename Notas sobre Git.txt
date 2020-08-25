@@ -1,0 +1,88 @@
+
+Un control de versiones nos permite controlar versiones de proyectos.
+
+Repositorio: Un Repositorio no  es mas que un proyecto donde se alojara el sitio, todo el codigo y ademas las versiones del mismo.
+
+El termino de commit significa que estamos creando una nueva version del proyecto. Se recomienda hacer commit cada vez que se haga algun cambio especifico en el proyecto.
+
+Existe un termino muy importante de entender a la hora de hacer los commit, es decir, crear una nueva version, ese termino se llama staying index.
+El staying index es basicamente la fase que tenemos que pasar antes de enviar nuestros archivos a una nueva version.
+
+
+
+Comandos Sobre Git y descripcion.
+
+git --version                                   -->  Muestra la version de git.
+
+git config --global                             --> Significa que la configuracion que se indique en este comando sera la misma para todos los proyectos.
+
+git config --global user.name "Ramon Cordova"   --> Establecemos un nombre de usuario
+
+git config --global user.email "rfc@correo.com" --> Establecemos el correo del usuario
+
+git config --global color.ui true               --> Activamos el resaltamiento de los comandos con colores
+
+git init                                        --> Te Permite crear un repositorio
+
+git status                                      --> Te Permite ver el estado de tu repositorio
+
+git add "nombre del arhcivo"                    --> Agregamos un archivo al staying index.
+git add .                                       --> Agregamos todos los archivos modificados al staying index
+
+git commit -m "descripcion"                     --> Agregams un nuevo commit
+
+git rm --cached "Nombre del archivo"            --> Quitamos un archivo del staying index
+
+
+Comandos para examinar commits previos.
+
+git log                         --> Nos permite traer todos los commits que hemos hecho.
+
+git log --stat                  --> Muestra los commits mas estadisiticas.
+
+git log --oneline               --> Muestra en un renglon cada commit.
+
+git log --graph                 --> Nos mostrara una grafica, que son utiles cuando se trabaja con ramas.
+
+git log --oneline --graph --all --> Ejecuta todos los comandos.
+
+git diff                        --> Muestra las diferencias de los cambios que se van a realizar en contraste con el ultimo commit del proyecto.
+
+git diff "numero" "nom arhcivo" --> Muestra las diferencias que existen entre el archivo actual y un commit en especifico.
+
+git checkout "numero"           --> Volvemos a una version que le especifiquemos del proyecto
+
+
+Branches o Ramas.   Una rama es basicamente una copia del proyecto original para poder editar esta copia
+y aplicarle los cambios que nosotros queramos.
+
+git branch                      --> Nos permite conocer todas las ramas del proyecto.
+
+git checkout -b "nombre rama"   --> Creamos y cambiamos a una nueva rama.
+
+git merge "nombre rama"         --> Juntamos la rama creada con la rama master.
+
+git branch -d "nombre rama"     --> Eliminamos una rama.
+
+
+
+Comandos para trabajar con github.
+
+git remote add origin https://github.com/Ramonf98/practica.git   --> Estamos enlazando nuestro repositorio con github.
+
+git push -u origin master                   --> Subimos la rama maestra al repositorio en github.
+
+git push                --> Este comando se utiliza cada vez que realicemos un commit en la rama y queramos subirlo a github.
+
+git pull origin master  --> Descargamos todos los cambios que se hayan aplicado al proyecto en github hacia nuestra computadora.
+
+
+
+Descargar un repositorio.
+
+Fork    --> Duplica el repositorio y lo añade al perfil en github.
+
+git clone "url"     --> Descarga el repositorio.git
+
+
+
