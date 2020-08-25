@@ -72,6 +72,14 @@ export default {
 
           rules.push(rule)
         }
+        if (!this.ConfirmPass) {
+          const rule =
+            v => !!v ||
+              'You need to confirm your password'
+
+          rules.push(rule)
+        }
+
         return rules
       },
     },
