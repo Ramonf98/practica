@@ -10,7 +10,6 @@ export default new Vuex.Store({
   mutations: {
     changeVisible(state){
       state.visible = !state.visible;
-      console.log(state.visible);
     }
   },
   actions: {

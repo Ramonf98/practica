@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-row class="justify-center">
-            <v-col sm="5" >
+            <v-col sm="8" md="6" >
                 <v-card>
                     <v-card-title class="secondary white--text">
                         <span>Sign Up Form</span>

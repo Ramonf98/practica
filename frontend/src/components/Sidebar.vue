@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer :value="visible" app>
+    <v-navigation-drawer :value="visible" app stateless width="200">
         <v-list dense>
             <v-list-item v-for="item in items" :key="item.title" link class="item-sidebar">
                 <v-list-item-icon class="texto">
@@ -51,7 +51,7 @@ import {mapState, mapMutations} from 'vuex';
 
 
 .item-sidebar{
-  transition: all 0.4s ease;
+  transition: all 0.2s linear;
 }
 .item-sidebar .texto{
   color: #757575;

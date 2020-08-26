@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-row class="justify-center">
-            <v-col sm="5" >
+            <v-col sm="8" md="6" >
                 <v-card>
                     <v-card-title class="primary white--text">
                         <span>Login Form</span>
@@ -12,10 +12,10 @@
                     <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="login">
                         <v-container>
                             <v-row>
-                                <v-col sm="12">
+                                <v-col cols="12" >
                                     <v-text-field prepend-icon="person" label="Username" :rules="userRules" v-model="username" required hide-details="auto"></v-text-field>
                                 </v-col>
-                                <v-col sm="12">
+                                <v-col cols="12"  >
                                     <v-text-field prepend-icon="lock"   label="Password" :rules="passwordRules" v-model="password" required type="password"></v-text-field>
                                 </v-col>
                             </v-row>
