@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer v-model="visible" app>
+    <v-navigation-drawer :value="visible" app>
         <v-list dense>
             <v-list-item v-for="item in items" :key="item.title" link class="item-sidebar">
                 <v-list-item-icon class="texto">
@@ -12,12 +12,18 @@
                     <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
+            <div class="d-flex justify-center py-3">
+              <v-btn color="primary" rounded small dark @click.stop="changeVisible">
+                <v-icon>arrow_back</v-icon>
+              </v-btn>
+            </div>
+
         </v-list>
     </v-navigation-drawer>
 </template>
 
 <script>
-import {mapState} from 'vuex';
+import {mapState, mapMutations} from 'vuex';
 
   export default {
     name: 'Sidebar',
@@ -30,9 +36,13 @@ import {mapState} from 'vuex';
       }
     },
     computed: {
-        ...mapState(['visible']),    
+        ...mapState(['visible']),
+
         
-    }
+    },
+    methods: {
+      ...mapMutations(['changeVisible']),
+    },
 
   }
 </script>
