@@ -1,7 +1,10 @@
 <template>
     <v-navigation-drawer :value="visible" app stateless width="200">
         <v-list dense>
-            <v-list-item v-for="item in items" :key="item.title" link class="item-sidebar">
+
+
+          <router-link :to="item.link" class="no-underline" v-for="item in items" :key="item.title">
+            <v-list-item  link class="item-sidebar">
                 <v-list-item-icon class="texto">
                     <span class="material-icons">
                       {{item.icon}}
@@ -12,6 +15,7 @@
                     <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
+            </router-link>
             <div class="d-flex justify-center py-3">
               <v-btn color="primary" rounded small dark @click.stop="changeVisible">
                 <v-icon>arrow_back</v-icon>
@@ -30,8 +34,8 @@ import {mapState, mapMutations} from 'vuex';
     data () {
       return {
         items: [
-          { title: 'Home', icon: 'home' },
-          { title: 'Inventory', icon: 'all_inbox' },
+          { title: 'Home', icon: 'home', link:"/" },
+          { title: 'Inventory', icon: 'all_inbox', link:"" },
         ],
       }
     },
@@ -49,7 +53,9 @@ import {mapState, mapMutations} from 'vuex';
 
 <style>
 
-
+.no-underline{
+  text-decoration: none;
+}
 .item-sidebar{
   transition: all 0.2s linear;
 }

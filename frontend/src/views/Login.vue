@@ -1,8 +1,8 @@
 <template>
-    <v-container>
+    <v-container fluid>
         <v-row class="justify-center">
             <v-col sm="8" md="6" >
-                <v-card>
+                <v-card class="elevation-12" >
                     <v-card-title class="primary white--text">
                         <span>Login Form</span>
                         <v-spacer></v-spacer>
