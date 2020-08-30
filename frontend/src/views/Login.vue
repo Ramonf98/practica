@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid>
+    <v-container>
         <v-row class="justify-center">
             <v-col sm="8" md="6" >
                 <v-card class="elevation-12" >
@@ -28,7 +28,7 @@
                         <div>
                             <v-alert 
                             :value="alert"
-                            color="pink"
+                            color="error"
                             dark
                             border="bottom"
                             icon="error"
@@ -79,23 +79,21 @@ export default {
                 this.valid=false;
             }
         },
-        login(){
+        login(username,password){
             if(this.valid){
-                axios.post('http://127.0.0.1:8000/api-token/',{
-                username: this.username,
-                password: this.password
+                    axios.post('http://127.0.0.1:8000/api-token/',{
+                    username: this.username,
+                    password: this.password
                 })
-
                 .then((response) => {
-                console.log(response.refresh);
-                console.log(response.access);
-                }, (error) => {
+                    console.log(response.data);
+                })
+                .catch(error => {
                     this.error="";
                     this.error+=error + " F ";
                     this.alert=true;
                     console.log(this.error);
                 });
-
             }else{
                 event.preventDefault();
             }  
